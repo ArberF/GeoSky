@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>GeoSky</title>
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- GSAP (with optional ScrollTrigger) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+</head>
+<body class="bg-blue-100 text-blue-900">
+
+<!-- Navbar -->
+<nav class="flex items-center justify-between p-6 bg-white shadow-md fixed top-0 left-0 w-full z-50">
+  <!-- Logo / Title -->
+  <div class="flex items-center">
+    <h1 class="text-2xl font-extrabold text-blue-700">GeoSky</h1>
+  </div>
+
+  <!-- Navigation Menu -->
+  <ul class="hidden md:flex space-x-6 text-lg">
+    <li><a href="#about" class="hover:text-blue-600 transition-colors">About</a></li>
+    <li><a href="#services" class="hover:text-blue-600 transition-colors">Services</a></li>
+    <li><a href="#products" class="hover:text-blue-600 transition-colors">Products</a></li>
+    <li><a href="#applications" class="hover:text-blue-600 transition-colors">Applications</a></li>
+    <li><a href="#industries" class="hover:text-blue-600 transition-colors">Industries</a></li>
+    <li><a href="#news" class="hover:text-blue-600 transition-colors">News</a></li>
+    <li><a href="#contact" class="hover:text-blue-600 transition-colors">Contact</a></li>
+  </ul>
+
+  <!-- Language / Other Buttons (Optional) -->
+  <div>
+    <button class="text-lg font-semibold text-blue-700 hover:text-blue-600">EN</button>
+  </div>
+</nav>
+
+<!-- Hero Section -->
+<header 
+  class="relative flex items-center justify-center h-screen bg-blue-500 text-white text-center overflow-hidden"
+  style="background: url('YOUR_HERO_IMAGE_URL_HERE') no-repeat center center/cover;"
+>
+  <!-- Overlay -->
+  <div class="absolute inset-0 bg-black bg-opacity-40"></div>
+  <div class="relative z-10 max-w-4xl px-4">
+    <h2 
+      id="hero-title" 
+      class="text-4xl md:text-6xl font-bold mb-4 opacity-0 -translate-y-5 drop-shadow-md"
+    >
+      Digital Inspection & Automated Data Analysis 
+      with Unmanned Aerial Systems
+    </h2>
+    <p class="text-lg md:text-2xl font-light mb-8 mx-auto max-w-2xl">
+      We provide precise and efficient drone solutions for Industry,
+      Infrastructure, Energy, and more.
+    </p>
+    <div class="flex flex-wrap justify-center gap-4">
+      <a
+        href="#industry"
+        class="inline-block px-6 py-3 bg-blue-600 text-white font-semibold rounded-md hover:bg-blue-700 transition duration-200"
+      >
+        Industry
+      </a>
+      <a
+        href="#infrastructure"
+        class="inline-block px-6 py-3 bg-blue-600 text-white font-semibold rounded-md hover:bg-blue-700 transition duration-200"
+      >
+        Infrastructure / Energy
+      </a>
+      <a
+        href="#blackout-video"
+        class="inline-block px-6 py-3 bg-white text-blue-600 font-semibold rounded-md hover:bg-gray-200 transition duration-200"
+      >
+        Watch the Blackout Video
+      </a>
+      <a
+        href="#peakr"
+        class="inline-block px-6 py-3 bg-blue-600 text-white font-semibold rounded-md hover:bg-blue-700 transition duration-200"
+      >
+        Because Every Second Counts - PEAKR
+      </a>
+    </div>
+  </div>
+</header>
+
+<!-- About Section -->
+<section id="about" class="pt-16 pb-16 bg-white">
+  <div class="container mx-auto px-4 text-center">
+    <h3 class="text-4xl font-semibold text-blue-700 mb-8">About</h3>
+    <p class="max-w-3xl mx-auto text-lg leading-relaxed">
+      GeoSky specializes in digital inspections and automated data analysis.
+      Using cutting-edge drone technology and innovative software solutions,
+      we set new standards in safety and precision.
+    </p>
+  </div>
+</section>
+
+<!-- Services Section -->
+<section id="services" class="pt-16 pb-16 bg-gray-100">
+  <div class="container mx-auto px-4 text-center">
+    <h3 class="text-4xl font-semibold text-blue-700 mb-8">Services</h3>
+    <!-- Example Cards -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <!-- Service 1 -->
+      <div class="p-8 bg-white shadow-lg rounded-lg hover:scale-105 transform transition duration-300">
+        <img
+          src="YOUR_IMAGE_URL_HERE"
+          alt="Inspection"
+          class="mx-auto mb-4 h-24"
+        />
+        <h4 class="text-2xl font-bold mb-2">Inspection</h4>
+        <p class="text-gray-600">
+          Routine inspections and condition reports for industrial facilities, 
+          buildings, wind turbines, and more—delivered safely and efficiently by drone.
+        </p>
+      </div>
+      <!-- Service 2 -->
+      <div class="p-8 bg-white shadow-lg rounded-lg hover:scale-105 transform transition duration-300">
+        <img
+          src="YOUR_IMAGE_URL_HERE"
+          alt="Thermography"
+          class="mx-auto mb-4 h-24"
+        />
+        <h4 class="text-2xl font-bold mb-2">Thermography</h4>
+        <p class="text-gray-600">
+          High-precision thermal imaging for early detection of defects and vulnerabilities 
+          in critical infrastructures.
+        </p>
+      </div>
+      <!-- Service 3 -->
+      <div class="p-8 bg-white shadow-lg rounded-lg hover:scale-105 transform transition duration-300">
+        <img
+          src="YOUR_IMAGE_URL_HERE"
+          alt="3D Modeling & Analysis"
+          class="mx-auto mb-4 h-24"
+        />
+        <h4 class="text-2xl font-bold mb-2">3D Modeling & Analysis</h4>
+        <p class="text-gray-600">
+          Detailed 3D models and analyses for planning, construction progress monitoring, 
+          and documentation.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Products Section -->
+<section id="products" class="pt-16 pb-16 bg-white">
+  <div class="container mx-auto px-4 text-center">
+    <h3 class="text-4xl font-semibold text-blue-700 mb-8">Products</h3>
+    <p class="max-w-3xl mx-auto text-lg mb-12 leading-relaxed">
+      Innovative hardware and software solutions for modern inspection 
+      and data processing.
+    </p>
+    <!-- Example product listing or highlights -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <!-- Product 1 -->
+      <div class="bg-gray-100 rounded-lg shadow-lg overflow-hidden">
+        <img
+          src="YOUR_IMAGE_URL_HERE"
+          alt="Drone Model X1"
+          class="w-full h-48 object-cover"
+        />
+        <div class="p-6">
+          <h4 class="text-xl font-bold mb-2">Drone Model X1</h4>
+          <p class="text-gray-600">
+            Powerful and versatile drone for a wide range of applications.
+          </p>
+        </div>
+      </div>
+      <!-- Product 2 -->
+      <div class="bg-gray-100 rounded-lg shadow-lg overflow-hidden">
+        <img
+          src="YOUR_IMAGE_URL_HERE"
+          alt="Analysis Software"
+          class="w-full h-48 object-cover"
+        />
+        <div class="p-6">
+          <h4 class="text-xl font-bold mb-2">Analysis Software</h4>
+          <p class="text-gray-600">
+            Automated data processing powered by machine learning.
+          </p>
+        </div>
+      </div>
+      <!-- Product 3 -->
+      <div class="bg-gray-100 rounded-lg shadow-lg overflow-hidden">
+        <img
+          src="YOUR_IMAGE_URL_HERE"
+          alt="Thermography Package"
+          class="w-full h-48 object-cover"
+        />
+        <div class="p-6">
+          <h4 class="text-xl font-bold mb-2">Thermography Package</h4>
+          <p class="text-gray-600">
+            Complete solution for thermal imaging, including software 
+            for fast analysis.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Applications Section -->
+<section id="applications" class="pt-16 pb-16 bg-gray-100">
+  <div class="container mx-auto px-4 text-center">
+    <h3 class="text-4xl font-semibold text-blue-700 mb-8">Applications</h3>
+    <p class="max-w-3xl mx-auto text-lg leading-relaxed">
+      Explore the wide-ranging possibilities of our unmanned aerial systems.
+    </p>
+    <!-- Example quick link buttons -->
+    <div class="flex flex-col md:flex-row justify-center mt-8 space-y-4 md:space-y-0 md:space-x-4">
+      <a href="#industry" class="px-6 py-3 bg-white shadow rounded hover:bg-blue-600 hover:text-white transition">
+        Industry
+      </a>
+      <a href="#infrastructure" class="px-6 py-3 bg-white shadow rounded hover:bg-blue-600 hover:text-white transition">
+        Infrastructure / Energy
+      </a>
+      <a href="#blackout-video" class="px-6 py-3 bg-white shadow rounded hover:bg-blue-600 hover:text-white transition">
+        Blackout Video
+      </a>
+      <a href="#peakr" class="px-6 py-3 bg-white shadow rounded hover:bg-blue-600 hover:text-white transition">
+        Because Every Second Counts - PEAKR
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- Industries Section -->
+<section id="industries" class="pt-16 pb-16 bg-white">
+  <div class="container mx-auto px-4 text-center">
+    <h3 class="text-4xl font-semibold text-blue-700 mb-8">Industries</h3>
+    <p class="max-w-3xl mx-auto text-lg leading-relaxed">
+      From construction and energy to government agencies—we offer
+      tailored solutions for every industry.
+    </p>
+  </div>
+</section>
+
+<!-- News Section -->
+<section id="news" class="pt-16 pb-16 bg-gray-100">
+  <div class="container mx-auto px-4 text-center">
+    <h3 class="text-4xl font-semibold text-blue-700 mb-8">News</h3>
+    <p class="max-w-3xl mx-auto text-lg leading-relaxed">
+      Stay up to date with the latest developments, product updates, 
+      and events.
+    </p>
+    <!-- Example "News" or "Blog" items -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-8">
+      <div class="bg-white rounded shadow p-6">
+        <h4 class="text-xl font-bold mb-2">News Post 1</h4>
+        <p class="text-gray-600">A short description of a recent topic.</p>
+      </div>
+      <div class="bg-white rounded shadow p-6">
+        <h4 class="text-xl font-bold mb-2">News Post 2</h4>
+        <p class="text-gray-600">A short description of another recent topic.</p>
+      </div>
+      <div class="bg-white rounded shadow p-6">
+        <h4 class="text-xl font-bold mb-2">News Post 3</h4>
+        <p class="text-gray-600">A short description of yet another topic.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Contact Section -->
+<section id="contact" class="pt-16 pb-16 bg-gray-200">
+  <div class="container mx-auto px-4 text-center">
+    <h3 class="text-4xl font-semibold text-blue-700 mb-4">Contact</h3>
+    <p class="text-lg">
+      We look forward to hearing from you.
+    </p>
+    <p class="mt-2 text-lg font-bold">📍 Address: Rudolf-Simon Gasse 5/38, 1110 Vienna</p>
+    <p class="mt-2 text-lg font-bold">📞 Phone: +43 6763662950</p>
+    <div class="mt-8 max-w-md mx-auto bg-white p-6 rounded-lg shadow-md">
+      <form id="contact-form">
+        <input
+          type="text"
+          id="name"
+          placeholder="Your Name"
+          class="mb-4 w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+        />
+        <input
+          type="email"
+          id="email"
+          placeholder="Your Email"
+          class="mb-4 w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+        />
+        <textarea
+          id="message"
+          placeholder="Your Message"
+          class="mb-4 w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+        ></textarea>
+        <button
+          type="submit"
+          class="w-full bg-blue-700 text-white p-3 rounded-lg hover:bg-blue-800 transition"
+        >
+          Send Message
+        </button>
+      </form>
+      <p
+        id="form-status"
+        class="mt-4 text-green-500 hidden"
+      >
+        Your message has been sent successfully!
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="py-6 bg-gray-900 text-white text-center mt-16">
+  <p>&copy; 2025 Dipl-Ing. Arber Fazliu. All rights reserved.</p>
+</footer>
+
+<!-- GSAP Animations -->
+<script>
+  // Register ScrollTrigger for animations on scroll
+  gsap.registerPlugin(ScrollTrigger);
+
+  // Animate Hero Title
+  gsap.to("#hero-title", {
+    opacity: 1,
+    y: 0,
+    duration: 1,
+    delay: 0.3
+  });
+
+  // Example fade-up effect for each section
+  const sectionsToAnimate = [
+    "#about",
+    "#services",
+    "#products",
+    "#applications",
+    "#industries",
+    "#news",
+    "#contact"
+  ];
+
+  sectionsToAnimate.forEach((selector) => {
+    gsap.from(selector + " h3, " + selector + " p, " + selector + " div, " + selector + " a, " + selector + " img", {
+      scrollTrigger: {
+        trigger: selector,
+        start: "top bottom"
+      },
+      opacity: 0,
+      y: 30,
+      duration: 1,
+      stagger: 0.1
+    });
+  });
+
+  // Simple Form Validation/Submit
+  document.getElementById("contact-form").addEventListener("submit", function(event) {
+    event.preventDefault();
+    let name = document.getElementById("name").value.trim();
+    let email = document.getElementById("email").value.trim();
+    let message = document.getElementById("message").value.trim();
+
+    if (name === "" || email === "" || message === "") {
+      alert("Please fill in all fields.");
+    } else {
+      document.getElementById("form-status").classList.remove("hidden");
+      this.reset();
+    }
+  });
+</script>
+</body>
+</html>
